@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@iconify/react": "^5.0.2",
+    "@vercel/analytics": "^2.0.0",
     "framer-motion": "^12.35.2",
     "next": "14.2.13",
     "nodemailer": "^6.9.7",

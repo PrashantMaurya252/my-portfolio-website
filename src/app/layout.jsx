@@ -3,6 +3,8 @@ import "./globals.css";
 import { Icon } from "@iconify/react";
 import ComputerNavbar from "@/components/ComputerNavbar";
 import { Inter } from 'next/font/google'
+import {Analytics} from '@vercel/analytics/react';
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -69,6 +71,7 @@ export default function RootLayout({ children }) {
       >
 
         {children}
+        <Analytics />
       </body>
     </html>
   );
