@@ -535,7 +535,7 @@ export default function Portfolio() {
               {
                 role: 'Full Stack Developer',
                 company: 'Codenia Technologies LLP',
-                period: 'Feb 2025 – Present',
+                period: 'Feb 2025 – March 2026',
                 highlights: [
                   'Architected 4+ production-grade full stack projects',
                   'Designed enterprise authentication with JWT & RBAC',
