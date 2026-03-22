@@ -367,7 +367,7 @@ export default function Portfolio() {
               <motion.a
                 whileHover={{ scale: 1.08, boxShadow: '0 0 30px rgba(34, 211, 238, 0.6)' }}
                 whileTap={{ scale: 0.95 }}
-                href="https://drive.google.com/file/d/1tBiAgxMQ2W1lclOeE5mTT5hpU8Sr3j6Z/view?usp=sharing"
+                href="https://drive.google.com/file/d/1lAwAA9h1fDRDXpF1lrO-uXwrdA9VXMld/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg transition-all flex items-center gap-2"
