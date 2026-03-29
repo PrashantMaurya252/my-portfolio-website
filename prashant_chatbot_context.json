@@ -1,0 +1,143 @@
+{
+  "name": "Prashant Kumar Maurya",
+  "role": "Full Stack Developer",
+  "summary": "Full Stack Developer with 2+ years of experience building scalable web applications using MERN stack and PostgreSQL. Skilled in backend architecture, authentication systems, and performance optimization. Experienced in integrating AI solutions using OpenAI and Gemini APIs.",
+  "skills": {
+    "languages": [
+      "JavaScript",
+      "TypeScript"
+    ],
+    "frontend": [
+      "React.js",
+      "Next.js",
+      "Redux Toolkit",
+      "Tailwind CSS"
+    ],
+    "backend": [
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "Socket.io"
+    ],
+    "databases": [
+      "PostgreSQL (Prisma)",
+      "MongoDB"
+    ],
+    "cloud_tools": [
+      "AWS (S3, EC2)",
+      "Azure (OCR)",
+      "Docker",
+      "Git",
+      "Stripe",
+      "Firebase"
+    ],
+    "security": [
+      "JWT",
+      "OAuth2",
+      "RBAC"
+    ]
+  },
+  "experience": [
+    {
+      "role": "Full Stack Developer",
+      "company": "Codenia Technologies LLP",
+      "period": "Feb 2025 \u2013 March 2026",
+      "highlights": [
+        "Built 4+ production-grade applications in finance & insurance domains",
+        "Designed secure authentication using JWT, OAuth2, RBAC",
+        "Developed scalable REST APIs using Node.js & Express",
+        "Implemented role-based workflows and audit systems",
+        "Optimized database queries improving performance by 45%",
+        "Improved API response time by 50%",
+        "Integrated OpenAI API for AI chatbot functionality",
+        "Implemented Gemini API for contextual AI responses",
+        "Applied prompt engineering techniques for LLM-based features",
+        "Built real-time systems using Socket.io",
+        "Integrated Azure OCR for document data extraction",
+        "Reduced debugging time by 60% with structured logging"
+      ]
+    },
+    {
+      "role": "Frontend Developer Intern",
+      "company": "Virtual Cybertrons",
+      "period": "Apr 2024 \u2013 Jan 2025",
+      "highlights": [
+        "Built reusable UI components using React & Next.js",
+        "Integrated Firebase authentication (social login)",
+        "Integrated 25+ APIs with caching optimization",
+        "Reduced network requests by 30%",
+        "Improved UI accessibility and responsiveness"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "E-commerce Platform",
+      "tech": [
+        "Next.js",
+        "Node.js",
+        "PostgreSQL",
+        "Prisma",
+        "Stripe"
+      ],
+      "features": [
+        "authentication",
+        "payments",
+        "cart",
+        "filtering",
+        "order tracking"
+      ]
+    },
+    {
+      "name": "Instagram Clone",
+      "tech": [
+        "MERN",
+        "Socket.io"
+      ],
+      "features": [
+        "chat",
+        "notifications",
+        "real-time updates"
+      ]
+    },
+    {
+      "name": "Blog Platform",
+      "tech": [
+        "MERN"
+      ],
+      "features": [
+        "CRUD",
+        "admin dashboard",
+        "search",
+        "pagination"
+      ]
+    }
+  ],
+  "ai_context": {
+    "capabilities": [
+      "Full Stack Development (MERN, Next.js)",
+      "Backend architecture & API design",
+      "Authentication systems (JWT, OAuth)",
+      "Database optimization (PostgreSQL, MongoDB)",
+      "Real-time systems (Socket.io)",
+      "AI integrations (OpenAI, Gemini)",
+      "Prompt engineering basics",
+      "Building scalable applications"
+    ],
+    "personality": [
+      "Professional",
+      "Concise",
+      "Helpful",
+      "Focus on practical solutions",
+      "Explains with examples"
+    ],
+    "limitations": [
+      "No unrelated personal information",
+      "Focused on technical topics only"
+    ]
+  },
+  "contact": {
+    "email": "mauryaprashant252@gmail.com",
+    "phone": "+91 6306315885"
+  }
+}
