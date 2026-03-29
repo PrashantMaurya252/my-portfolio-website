@@ -3,6 +3,11 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Icon } from '@iconify/react';
+import CurrentlyLearning from '@/components/CurrentlyLearning';
+import GitHubActivity from '@/components/GitHubActivity';
+import ProjectsSection from '@/components/ProjectCard';
+import AchievementsCertifications from '@/components/AchivementsCertifications';
+import Experience from '@/components/Experience';
 
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(true);
@@ -178,8 +183,13 @@ export default function Portfolio() {
     'Frontend': ['React.js', 'Next.js', 'Tailwind CSS', 'Redux Toolkit', 'Framer Motion'],
     'Backend': ['Node.js', 'Express.js', 'Socket.io', 'RESTful APIs'],
     'Databases': ['PostgreSQL', 'MongoDB', 'Prisma ORM', 'Mongoose'],
-    'DevOps & Tools': ['AWS (Basic S3,EC2)', 'Azure (OCR Service)', 'Docker (Basic)', 'Git', 'GitHub', 'Firebase'],
+    'DevOps & Tools': ['AWS (Basic S3,EC2)', 'Azure (OCR Service)', 'Docker (Basic)', 'Git', 'GitHub', 'Firebase','Postman', 'Browser DevTools'],
     'Security': ['JWT', 'OAuth2', 'RBAC', 'Bcrypt'],
+    'AI & GenAI':['Prompt Engineering',
+    'LLM API Integration (OpenAI, Gemini)',
+    'AI-powered Feature Development',
+    'Response Structuring & Optimization'],
+    // 'Tools':['Postman','Browser Dev Tools','Lovable','Chatgpt','Claude']
   };
 
   const certifications = [
@@ -356,7 +366,7 @@ export default function Portfolio() {
                 darkMode ? 'text-gray-400' : 'text-gray-600'
               }`}
             >
-              Building production-grade web applications with MERN stack & PostgreSQL. Specialized in secure authentication, real-time features, and cloud integrations. 2+ years of proven expertise.
+              Full Stack Developer (MERN) building scalable, production-ready applications with real-time features, secure authentication, and AI-powered functionality using LLM APIs.
             </motion.p>
 
             {/* Button Hover Animations */}
@@ -506,7 +516,7 @@ export default function Portfolio() {
       </section>
 
       {/* Experience Section */}
-      <section
+      {/* <section
         id="experience"
         className={`py-20 px-4 ${
           darkMode ? 'bg-slate-900 border-t border-slate-800' : 'bg-white border-t border-gray-200'
@@ -592,10 +602,11 @@ export default function Portfolio() {
             ))}
           </motion.div>
         </div>
-      </section>
+      </section> */}
+      <Experience darkMode={darkMode}/>
 
       {/* Projects Section with Card Flip & Zoom */}
-      <section
+      {/* <section
         id="projects"
         className={`py-20 px-4 ${
           darkMode ? 'bg-slate-950 border-t border-slate-800' : 'bg-gray-50 border-t border-gray-200'
@@ -635,7 +646,7 @@ export default function Portfolio() {
                 } transition-all duration-300`}
                 style={{ transformStyle: 'preserve-3d' }}
               >
-                {/* Project Header with Zoom */}
+               
                 <motion.div
                   whileHover={{ scale: 1.1 }}
                   className={`h-32 bg-gradient-to-br overflow-hidden ${
@@ -716,10 +727,15 @@ export default function Portfolio() {
             ))}
           </motion.div>
         </div>
-      </section>
+      </section> */}
+
+      <CurrentlyLearning darkMode={darkMode} />
+<GitHubActivity darkMode={darkMode} />
+<ProjectsSection darkMode={darkMode} />
+<AchievementsCertifications darkMode={darkMode} />
 
       {/* Education Section */}
-      <section
+      {/* <section
         id="education"
         className={`py-20 px-4 ${
           darkMode ? 'bg-slate-900 border-t border-slate-800' : 'bg-white border-t border-gray-200'
@@ -785,7 +801,7 @@ export default function Portfolio() {
             ))}
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Section with Icon Animations */}
       <section
