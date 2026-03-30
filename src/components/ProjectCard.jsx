@@ -616,7 +616,7 @@ export default function ProjectsSection({ darkMode = true }) {
           </p>
         </motion.div>
 
-        <div className="w-full grid grid-cols-1 screen-900:grid-cols-2 screen-1350:grid-cols-3 gap-6 items-start">
+        <div className="w-full grid grid-cols-1 screen-680:grid-cols-2 screen-1350:grid-cols-3 gap-6 items-start">
         {/* <div className="w-full flex gap-6 sm:"> */}
           {sampleProjects.map((project, i) => (
             <ProjectCard key={i} project={project} darkMode={darkMode} />
