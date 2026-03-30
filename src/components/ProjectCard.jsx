@@ -400,7 +400,7 @@ export function ProjectCard({ project, darkMode = true }) {
         {/* Card content */}
         <div className="p-5">
           <div className="flex items-start justify-between mb-2">
-            <h3 className="text-lg font-bold text-cyan-400 leading-tight">{project.title}</h3>
+            <h3 className="text-lg font-bold text-cyan-400 leading-tight lg:text-red-500">{project.title}</h3>
             {images.length > 1 && (
               <span
                 className={`text-xs flex-shrink-0 ml-2 px-1.5 py-0.5 rounded font-mono ${
@@ -616,7 +616,7 @@ export default function ProjectsSection({ darkMode = true }) {
           </p>
         </motion.div>
 
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+        <div className="w-full grid grid-cols-1 screen-900:grid-cols-2 screen-1350:grid-cols-3 gap-6 items-start">
         {/* <div className="w-full flex gap-6 sm:"> */}
           {sampleProjects.map((project, i) => (
             <ProjectCard key={i} project={project} darkMode={darkMode} />
