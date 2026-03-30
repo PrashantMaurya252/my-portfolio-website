@@ -8,6 +8,7 @@ import GitHubActivity from '@/components/GitHubActivity';
 import ProjectsSection from '@/components/ProjectCard';
 import AchievementsCertifications from '@/components/AchivementsCertifications';
 import Experience from '@/components/Experience';
+import PortfolioChatbot from '@/components/PortfolioChatbot';
 
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(true);
@@ -515,293 +516,15 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Experience Section */}
-      {/* <section
-        id="experience"
-        className={`py-20 px-4 ${
-          darkMode ? 'bg-slate-900 border-t border-slate-800' : 'bg-white border-t border-gray-200'
-        }`}
-      >
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Professional Experience
-            </h2>
-          </motion.div>
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
-            {[
-              {
-                role: 'Full Stack Developer',
-                company: 'Codenia Technologies LLP',
-                period: 'Feb 2025 – March 2026',
-                highlights: [
-                  'Architected 4+ production-grade full stack projects',
-                  'Designed enterprise authentication with JWT & RBAC',
-                  'Built complex approval workflows with audit systems',
-                  'Optimized queries improving performance by 45%',
-                  'Achieved 99.8% uptime through systematic debugging',
-                ],
-              },
-              {
-                role: 'Frontend Developer Intern',
-                company: 'Virtual Cybertrons',
-                period: 'Apr 2024 – Jan 2025',
-                highlights: [
-                  'Developed modular, reusable UI components',
-                  'Integrated Firebase Authentication for social login',
-                  'Integrated 25+ APIs with intelligent caching',
-                  'Reduced network requests by 30%',
-                  'Implemented accessible UI components',
-                ],
-              },
-            ].map((exp, i) => (
-              <motion.div
-                key={i}
-                variants={itemVariants}
-                whileHover={{ x: 5 }}
-                className={`p-6 rounded-lg border-l-4 border-cyan-400 ${
-                  darkMode
-                    ? 'bg-slate-800/50 border border-slate-700'
-                    : 'bg-blue-50 border border-gray-200'
-                }`}
-              >
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-cyan-400">{exp.role}</h3>
-                    <p className={`text-lg font-semibold ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                      {exp.company}
-                    </p>
-                  </div>
-                  <span className={`text-sm font-medium mt-2 md:mt-0 ${
-                    darkMode ? 'text-gray-400' : 'text-gray-600'
-                  }`}>
-                    {exp.period}
-                  </span>
-                </div>
-                <ul className="space-y-2">
-                  {exp.highlights.map((highlight, j) => (
-                    <li key={j} className={`flex gap-3 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                      <span className="text-cyan-400 mt-1">▸</span>
-                      {highlight}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section> */}
-      <Experience darkMode={darkMode}/>
-
-      {/* Projects Section with Card Flip & Zoom */}
-      {/* <section
-        id="projects"
-        className={`py-20 px-4 ${
-          darkMode ? 'bg-slate-950 border-t border-slate-800' : 'bg-gray-50 border-t border-gray-200'
-        }`}
-      >
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Featured Projects
-            </h2>
-            <p className={`text-lg ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-              Production-ready applications I've built
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-6"
-          >
-            {projects.map((project, i) => (
-              <motion.div
-                key={i}
-                variants={flipVariants}
-                whileHover="hover"
-                className={`rounded-lg overflow-hidden backdrop-blur-sm perspective ${
-                  darkMode
-                    ? 'bg-slate-800/50 border border-slate-700 hover:border-cyan-500/50'
-                    : 'bg-white/50 border border-gray-200 hover:border-cyan-400'
-                } transition-all duration-300`}
-                style={{ transformStyle: 'preserve-3d' }}
-              >
-               
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  className={`h-32 bg-gradient-to-br overflow-hidden ${
-                    i === 0 ? 'from-cyan-500/20 to-blue-500/20' :
-                    i === 1 ? 'from-purple-500/20 to-pink-500/20' :
-                    'from-green-500/20 to-cyan-500/20'
-                  }`}
-                />
-
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-cyan-400 mb-3">{project.title}</h3>
-                  <p className={`text-sm mb-4 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                    {project.description}
-                  </p>
-
-                  <div className="mb-4 space-y-2">
-                    {project.highlights.map((highlight, j) => (
-                      <div key={j} className="flex gap-2 text-sm">
-                        <span className="text-cyan-400">✓</span>
-                        <span className={darkMode ? 'text-gray-300' : 'text-gray-700'}>
-                          {highlight}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag, j) => (
-                      <span
-                        key={j}
-                        className={`text-xs px-2 py-1 rounded ${
-                          darkMode
-                            ? 'bg-slate-700 text-cyan-300'
-                            : 'bg-blue-100 text-blue-700'
-                        }`}
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex gap-3">
-                    <motion.a
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:shadow-lg transition-all text-center flex items-center justify-center gap-2"
-                    >
-                      <motion.div
-                        animate="animate"
-                        variants={rotateVariants}
-                      >
-                        <Icon icon="mdi:github" width="16" height="16" />
-                      </motion.div>
-                      Code
-                    </motion.a>
-                    <motion.a
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      href={project.liveLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`flex-1 px-4 py-2 rounded-lg border-2 border-cyan-400 text-cyan-400 font-semibold text-center hover:bg-cyan-400 hover:text-slate-900 transition-all flex items-center justify-center gap-2`}
-                    >
-                      <motion.div
-                        animate={{ x: [0, 5, 0] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      >
-                        <Icon icon="mdi:open-in-new" width="16" height="16" />
-                      </motion.div>
-                      Live
-                    </motion.a>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section> */}
+     
 
       <CurrentlyLearning darkMode={darkMode} />
 <GitHubActivity darkMode={darkMode} />
 <ProjectsSection darkMode={darkMode} />
 <AchievementsCertifications darkMode={darkMode} />
+<PortfolioChatbot darkMode={darkMode}/>
 
-      {/* Education Section */}
-      {/* <section
-        id="education"
-        className={`py-20 px-4 ${
-          darkMode ? 'bg-slate-900 border-t border-slate-800' : 'bg-white border-t border-gray-200'
-        }`}
-      >
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Certifications & Education
-            </h2>
-          </motion.div>
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="space-y-6"
-          >
-            {certifications.map((cert, i) => (
-              <motion.div
-                key={i}
-                variants={itemVariants}
-                whileHover={{ x: 5 }}
-                className={`p-6 rounded-lg flex items-start gap-4 ${
-                  darkMode
-                    ? 'bg-slate-800/50 border border-slate-700 hover:border-cyan-500/50'
-                    : 'bg-blue-50 border border-gray-200 hover:border-cyan-400'
-                } transition-all duration-300`}
-              >
-                <div className={`p-3 rounded-lg ${
-                  darkMode ? 'bg-slate-700' : 'bg-blue-200'
-                }`}>
-                  <Icon icon={cert.icon} width="24" height="24" className="text-cyan-400" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-cyan-400">{cert.title}</h3>
-                  <p className={darkMode ? 'text-gray-400' : 'text-gray-600'}>
-                    {cert.issuer} • Certificate
-                  </p>
-                </div>
-                <motion.a
-                  whileHover={{ scale: 1.15, rotate: 10 }}
-                  whileTap={{ scale: 0.95 }}
-                  href={cert.certificateLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`p-2 rounded-lg ${
-                    darkMode
-                      ? 'bg-slate-700 hover:bg-slate-600 text-cyan-400'
-                      : 'bg-blue-100 hover:bg-blue-200 text-blue-600'
-                  } transition-all`}
-                  title="View Certificate"
-                >
-                  <Icon icon="mdi:external-link" width="20" height="20" />
-                </motion.a>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section> */}
+     
 
       {/* Contact Section with Icon Animations */}
       <section
@@ -966,7 +689,7 @@ export default function Portfolio() {
       >
         <div className="max-w-6xl mx-auto text-center">
           <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-            © 2025 Prashant Kumar Maurya. All rights reserved.
+            © 2026 Prashant Kumar Maurya. All rights reserved.
           </p>
         </div>
       </footer>
