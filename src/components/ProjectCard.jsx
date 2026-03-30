@@ -322,7 +322,7 @@ export function ProjectCard({ project, darkMode = true }) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className={`rounded-2xl border overflow-hidden transition-all duration-300 ${
+        className={`w-full rounded-2xl border overflow-hidden transition-all duration-300 ${
           darkMode
             ? 'bg-slate-800/60 border-slate-700 hover:border-cyan-500/50'
             : 'bg-white border-gray-200 hover:border-cyan-400'
