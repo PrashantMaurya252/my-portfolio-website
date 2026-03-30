@@ -7,11 +7,11 @@ module.exports = {
   ],
   theme: {
     screens:{
-      "screen-1350":'1350px',
-      "screen-1100":{max:'1100px'},
-      "screen-900":'900px',
-      "screen-680":'680px',
-      "screen-400":{max:'400px'},
+      "screen-1350":"1350px",
+      "screen-1100":"1100px",
+      "screen-900":"900px",
+      "screen-680":"680px",
+      "screen-400":"400px",
     },
     extend: {
       
