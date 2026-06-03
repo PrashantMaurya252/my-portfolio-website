@@ -3,26 +3,10 @@
   "role": "Full Stack Developer",
   "summary": "Full Stack Developer with 2+ years of experience building scalable web applications using MERN stack and PostgreSQL. Skilled in backend architecture, authentication systems, and performance optimization. Experienced in integrating AI solutions using OpenAI and Gemini APIs.",
   "skills": {
-    "languages": [
-      "JavaScript",
-      "TypeScript"
-    ],
-    "frontend": [
-      "React.js",
-      "Next.js",
-      "Redux Toolkit",
-      "Tailwind CSS"
-    ],
-    "backend": [
-      "Node.js",
-      "Express.js",
-      "REST APIs",
-      "Socket.io"
-    ],
-    "databases": [
-      "PostgreSQL (Prisma)",
-      "MongoDB"
-    ],
+    "languages": ["JavaScript", "TypeScript"],
+    "frontend": ["React.js", "Next.js", "Redux Toolkit", "Tailwind CSS"],
+    "backend": ["Node.js", "Express.js", "REST APIs", "Socket.io", "Nest.js"],
+    "databases": ["PostgreSQL (Prisma)", "MongoDB"],
     "cloud_tools": [
       "AWS (S3, EC2)",
       "Azure (OCR)",
@@ -31,13 +15,28 @@
       "Stripe",
       "Firebase"
     ],
-    "security": [
-      "JWT",
-      "OAuth2",
-      "RBAC"
-    ]
+    "security": ["JWT", "OAuth2", "RBAC"]
   },
   "experience": [
+    {
+      "role": "Backend Developer",
+      "company": "Hiverift Softwares",
+      "period": "April 2026 – Present",
+      "highlights": [
+        "Architected and developed scalable backend systems using NestJS, TypeScript, MongoDB, and Mongoose",
+        "Leading backend development of Wakeup-Makeup, a multi-vendor marketplace platform supporting 6 user roles",
+        "Implemented JWT authentication, Auth Guards, Role Guards, and RBAC for secure access control",
+        "Designed and developed Vendor Management, Influencer Management, Coupon, and Commission modules",
+        "Built automated Vendor and Influencer payout systems based on configurable commission structures",
+        "Implemented MongoDB transactions to ensure data consistency and atomicity across critical workflows",
+        "Developed Cloudinary-based media management pipelines for scalable image and file handling",
+        "Built Store For Explore e-commerce platform with OTP authentication and Razorpay payment integration",
+        "Designed reusable REST APIs, modular architecture, and scalable backend services following NestJS best practices",
+        "Optimized database queries, indexing strategies, and API performance for production workloads",
+        "Collaborated with stakeholders to design marketplace workflows, business logic, and system architecture",
+        "Currently designing service booking and provider assignment workflows for large-scale marketplace operations"
+      ]
+    },
     {
       "role": "Full Stack Developer",
       "company": "Codenia Technologies LLP",
@@ -73,13 +72,7 @@
   "projects": [
     {
       "name": "E-commerce Platform",
-      "tech": [
-        "Next.js",
-        "Node.js",
-        "PostgreSQL",
-        "Prisma",
-        "Stripe"
-      ],
+      "tech": ["Next.js", "Node.js", "PostgreSQL", "Prisma", "Stripe"],
       "features": [
         "authentication",
         "payments",
@@ -90,27 +83,13 @@
     },
     {
       "name": "Instagram Clone",
-      "tech": [
-        "MERN",
-        "Socket.io"
-      ],
-      "features": [
-        "chat",
-        "notifications",
-        "real-time updates"
-      ]
+      "tech": ["MERN", "Socket.io"],
+      "features": ["chat", "notifications", "real-time updates"]
     },
     {
       "name": "Blog Platform",
-      "tech": [
-        "MERN"
-      ],
-      "features": [
-        "CRUD",
-        "admin dashboard",
-        "search",
-        "pagination"
-      ]
+      "tech": ["MERN"],
+      "features": ["CRUD", "admin dashboard", "search", "pagination"]
     }
   ],
   "ai_context": {

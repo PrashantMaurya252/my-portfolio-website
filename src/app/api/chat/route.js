@@ -1,4 +1,4 @@
-import { GoogleGenerativeAI } from '@google/generative-ai';
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GENAI_API_KEY);
 
@@ -22,7 +22,7 @@ Full Stack Developer with 2+ years of experience building scalable, production-g
 TECHNICAL SKILLS:
 - Languages: JavaScript (ES6+), TypeScript
 - Frontend: React.js, Next.js, Redux Toolkit, Tailwind CSS, Material UI, Framer Motion
-- Backend: Node.js, Express.js, REST API Design, Socket.io
+- Backend: Node.js, Express.js, REST API Design, Socket.io,Nest.js
 - Databases: PostgreSQL (Prisma), MongoDB (Mongoose)
 - Cloud & Tools: AWS (S3, EC2), Azure (OCR), Docker, Git, GitHub, Stripe, Firebase
 - AI / GenAI: LLM Integration, Prompt Engineering, OpenAI API, Gemini API, AI Chatbot Development, Context Injection, RAG Basics
@@ -35,7 +35,25 @@ CURRENTLY LEARNING:
 
 PROFESSIONAL EXPERIENCE:
 
-1. Full Stack Developer — Codenia Technologies LLP (Feb 2025 – March 2026)
+1. Full Stack Developer — Hiverift Softwares (Apr 2026 – Present)
+
+   - Architecting and developing scalable backend systems using NestJS, TypeScript, MongoDB, and Mongoose
+   - Leading backend development of a multi-vendor marketplace platform supporting 6 user roles and complex business workflows
+   - Independently designing and implementing backend architecture, database schemas, APIs, and core business modules
+   - Designed and implemented secure authentication and authorization using JWT, Auth Guards, Role Guards, and RBAC
+   - Developed Vendor Management, Influencer Management, Coupon Management, and Commission Tracking modules
+   - Built automated Vendor and Influencer payout systems based on configurable commission structures and sales slabs
+   - Implemented MongoDB transactions to ensure data consistency and atomicity across critical business operations
+   - Designed Cloudinary-based media management pipelines for scalable image and file storage
+   - Developed a production-grade E-commerce platform with product management, order management, cart, wishlist, and checkout workflows
+   - Integrated Razorpay payment gateway for secure online payments and transaction verification
+   - Implemented passwordless OTP-based authentication and notification systems using Nodemailer
+   - Designed reusable REST APIs and modular backend architecture following NestJS best practices and clean architecture principles
+   - Optimized database queries, indexing strategies, and API performance for production-scale workloads
+   - Collaborated with stakeholders to define marketplace workflows, service lifecycles, and scalable system architecture
+
+
+2. Full Stack Developer — Codenia Technologies LLP (Feb 2025 – March 2026)
    - Delivered 4+ production-grade full stack applications in finance and insurance domains
    - Independently built 3 complete projects from scratch within this role
    - Engineered an Expense Management Platform with role-based workflows, approval automation, and audit trail tracking
@@ -51,7 +69,7 @@ PROFESSIONAL EXPERIENCE:
    - Improved frontend performance reducing load time by 40%
    - Organized codebase using modular architecture and reusable services, accelerating development speed by 30%
 
-2. Frontend Developer Intern — Virtual Cybertrons (Apr 2024 – Jan 2025)
+3. Frontend Developer Intern — Virtual Cybertrons (Apr 2024 – Jan 2025)
    - Developed reusable and modular UI components for 2+ web applications using Next.js, React.js, and Tailwind CSS
    - Ensured responsive, accessible, and cross-browser compatible UI
    - Managed global state efficiently using React Context API
@@ -116,11 +134,11 @@ export async function POST(request) {
     const { messages } = await request.json();
 
     if (!messages || !Array.isArray(messages)) {
-      return Response.json({ error: 'Invalid request' }, { status: 400 });
+      return Response.json({ error: "Invalid request" }, { status: 400 });
     }
 
     const model = genAI.getGenerativeModel({
-      model: 'gemini-2.5-flash',
+      model: "gemini-2.5-flash",
       systemInstruction: SYSTEM_PROMPT,
     });
 
@@ -128,9 +146,9 @@ export async function POST(request) {
     const history = messages
       .slice(1) // skip greeting
       .slice(0, -1) // all but last
-      .filter((m) => m.role === 'user' || m.role === 'assistant')
+      .filter((m) => m.role === "user" || m.role === "assistant")
       .map((m) => ({
-        role: m.role === 'assistant' ? 'model' : 'user',
+        role: m.role === "assistant" ? "model" : "user",
         parts: [{ text: m.content }],
       }));
 
@@ -142,10 +160,10 @@ export async function POST(request) {
 
     return Response.json({ reply });
   } catch (error) {
-    console.error('Chatbot API error:', error);
+    console.error("Chatbot API error:", error);
     return Response.json(
-      { error: 'Failed to get response from Gemini' },
-      { status: 500 }
+      { error: "Failed to get response from Gemini" },
+      { status: 500 },
     );
   }
 }

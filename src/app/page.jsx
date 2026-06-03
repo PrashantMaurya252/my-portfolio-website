@@ -182,7 +182,7 @@ export default function Portfolio() {
   const skills = {
     'Languages': ['JavaScript (ES6+)', 'TypeScript', 'HTML5', 'CSS3'],
     'Frontend': ['React.js', 'Next.js', 'Tailwind CSS', 'Redux Toolkit', 'Framer Motion'],
-    'Backend': ['Node.js', 'Express.js', 'Socket.io', 'RESTful APIs'],
+    'Backend': ['Node.js', 'Express.js', 'Socket.io', 'RESTful APIs','Nest.js'],
     'Databases': ['PostgreSQL', 'MongoDB', 'Prisma ORM', 'Mongoose'],
     'DevOps & Tools': ['AWS (Basic S3,EC2)', 'Azure (OCR Service)', 'Docker (Basic)', 'Git', 'GitHub', 'Firebase','Postman', 'Browser DevTools'],
     'Security': ['JWT', 'OAuth2', 'RBAC', 'Bcrypt'],
@@ -378,7 +378,7 @@ export default function Portfolio() {
               <motion.a
                 whileHover={{ scale: 1.08, boxShadow: '0 0 30px rgba(34, 211, 238, 0.6)' }}
                 whileTap={{ scale: 0.95 }}
-                href="https://drive.google.com/file/d/18c8fuEe14hlbVS6mRResojlnsGf78nrt/view?usp=sharing"
+                href="https://drive.google.com/file/d/1zlRPL0Xb8S5NaSMasl_f7a8rLxCyVoTz/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg transition-all flex items-center gap-2"
