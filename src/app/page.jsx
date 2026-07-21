@@ -9,6 +9,7 @@ import ProjectsSection from '@/components/ProjectCard';
 import AchievementsCertifications from '@/components/AchivementsCertifications';
 import Experience from '@/components/Experience';
 import PortfolioChatbot from '@/components/PortfolioChatbot';
+import LeetCodeActivity from '@/components/LeetCodeActivity';
 
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(true);
@@ -378,7 +379,7 @@ export default function Portfolio() {
               <motion.a
                 whileHover={{ scale: 1.08, boxShadow: '0 0 30px rgba(34, 211, 238, 0.6)' }}
                 whileTap={{ scale: 0.95 }}
-                href="https://drive.google.com/file/d/1zlRPL0Xb8S5NaSMasl_f7a8rLxCyVoTz/view?usp=sharing"
+                href="https://drive.google.com/file/d/1PHTpf4RFuh_jKqLpsB8gsJIukm49zV1P/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg transition-all flex items-center gap-2"
@@ -520,6 +521,7 @@ export default function Portfolio() {
 
       <CurrentlyLearning darkMode={darkMode} />
 <GitHubActivity darkMode={darkMode} />
+<LeetCodeActivity darkMode={darkMode} />
 <ProjectsSection darkMode={darkMode} />
 <AchievementsCertifications darkMode={darkMode} />
 <PortfolioChatbot darkMode={darkMode}/>
@@ -694,16 +696,29 @@ export default function Portfolio() {
         </div>
       </footer>
 
-      {/* Mobile Menu Button */}
-      <motion.div className="md:hidden fixed bottom-8 right-8 z-40 flex flex-col gap-2">
+      {/* Floating Action Buttons */}
+      <motion.div className="fixed bottom-8 right-8 z-40 flex flex-col gap-3">
+        {/* Email Button - Mobile Only */}
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={() => scrollToSection('contact')}
-          className="p-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-full shadow-lg hover:shadow-cyan-500/50 transition-all"
+          className="md:hidden p-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-full shadow-lg hover:shadow-cyan-500/50 transition-all"
         >
           <Icon icon="material-symbols:mail" width="24" height="24" />
         </motion.button>
+        
+        {/* WhatsApp Button - Visible Everywhere */}
+        <motion.a
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          href="https://wa.me/916306315885"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-4 bg-gradient-to-r from-green-400 to-green-600 text-white rounded-full shadow-lg hover:shadow-green-500/50 transition-all flex items-center justify-center"
+        >
+          <Icon icon="mdi:whatsapp" width="28" height="28" />
+        </motion.a>
       </motion.div>
     </div>
   );

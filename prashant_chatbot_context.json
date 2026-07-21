@@ -3,10 +3,27 @@
   "role": "Full Stack Developer",
   "summary": "Full Stack Developer with 2+ years of experience building scalable web applications using MERN stack and PostgreSQL. Skilled in backend architecture, authentication systems, and performance optimization. Experienced in integrating AI solutions using OpenAI and Gemini APIs.",
   "skills": {
-    "languages": ["JavaScript", "TypeScript"],
-    "frontend": ["React.js", "Next.js", "Redux Toolkit", "Tailwind CSS"],
-    "backend": ["Node.js", "Express.js", "REST APIs", "Socket.io", "Nest.js"],
-    "databases": ["PostgreSQL (Prisma)", "MongoDB"],
+    "languages": [
+      "JavaScript",
+      "TypeScript"
+    ],
+    "frontend": [
+      "React.js",
+      "Next.js",
+      "Redux Toolkit",
+      "Tailwind CSS"
+    ],
+    "backend": [
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "Socket.io",
+      "Nest.js"
+    ],
+    "databases": [
+      "PostgreSQL (Prisma)",
+      "MongoDB"
+    ],
     "cloud_tools": [
       "AWS (S3, EC2)",
       "Azure (OCR)",
@@ -15,11 +32,15 @@
       "Stripe",
       "Firebase"
     ],
-    "security": ["JWT", "OAuth2", "RBAC"]
+    "security": [
+      "JWT",
+      "OAuth2",
+      "RBAC"
+    ]
   },
   "experience": [
     {
-      "role": "Backend Developer",
+      "role": "Full Stack Developer",
       "company": "Hiverift Softwares",
       "period": "April 2026 – Present",
       "highlights": [
@@ -72,7 +93,13 @@
   "projects": [
     {
       "name": "E-commerce Platform",
-      "tech": ["Next.js", "Node.js", "PostgreSQL", "Prisma", "Stripe"],
+      "tech": [
+        "Next.js",
+        "Node.js",
+        "PostgreSQL",
+        "Prisma",
+        "Stripe"
+      ],
       "features": [
         "authentication",
         "payments",
@@ -83,13 +110,27 @@
     },
     {
       "name": "Instagram Clone",
-      "tech": ["MERN", "Socket.io"],
-      "features": ["chat", "notifications", "real-time updates"]
+      "tech": [
+        "MERN",
+        "Socket.io"
+      ],
+      "features": [
+        "chat",
+        "notifications",
+        "real-time updates"
+      ]
     },
     {
       "name": "Blog Platform",
-      "tech": ["MERN"],
-      "features": ["CRUD", "admin dashboard", "search", "pagination"]
+      "tech": [
+        "MERN"
+      ],
+      "features": [
+        "CRUD",
+        "admin dashboard",
+        "search",
+        "pagination"
+      ]
     }
   ],
   "ai_context": {
@@ -117,6 +158,8 @@
   },
   "contact": {
     "email": "mauryaprashant252@gmail.com",
-    "phone": "+91 6306315885"
+    "phone": "+91 6306315885",
+    "leetcode": "https://leetcode.com/u/Prashant_Maurya2000/",
+    "whatsapp": "https://wa.me/916306315885"
   }
 }

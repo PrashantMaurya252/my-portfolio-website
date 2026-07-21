@@ -19,21 +19,21 @@ const itemVariants = {
 const achievements = [
   {
     id: 'a1',
-    title: 'Designed & Developed 8+ Projects',
+    title: 'Designed & Developed 10+ Projects',
     description:
-      'Built and deployed 8+ full-stack applications ranging from social platforms to enterprise tools — covering authentication, payments, real-time features, and cloud integrations.',
+      'Built and deployed 10+ full-stack applications ranging from social platforms to enterprise tools — covering authentication, payments, real-time features, and cloud integrations.',
     icon: 'material-symbols:rocket-launch',
     color: 'from-cyan-400 to-blue-500',
     glowColor: 'rgba(34,211,238,0.25)',
     borderColor: 'border-cyan-500/40',
     textColor: 'text-cyan-400',
     bgAccent: 'bg-cyan-500/10',
-    stat: '8+',
+    stat: '10+',
     statLabel: 'Projects',
   },
   {
     id: 'a2',
-    title: 'Solved 100+ DSA Problems',
+    title: 'Solved 150+ DSA Problems',
     description:
       'Consistently solving Data Structures & Algorithms problems on LeetCode and GeeksforGeeks — covering arrays, strings, two pointers, searching and sorting, and system design fundamentals.',
     icon: 'mdi:code-greater-than',
@@ -42,7 +42,7 @@ const achievements = [
     borderColor: 'border-emerald-500/40',
     textColor: 'text-emerald-400',
     bgAccent: 'bg-emerald-500/10',
-    stat: '100+',
+    stat: '150+',
     statLabel: 'Problems',
     platforms: [
       {
@@ -86,11 +86,10 @@ export default function AchievementsCertifications({ darkMode = true }) {
   return (
     <section
       id="education"
-      className={`py-24 px-4 relative overflow-hidden ${
-        darkMode
-          ? 'bg-slate-900 border-t border-slate-800'
-          : 'bg-white border-t border-gray-200'
-      }`}
+      className={`py-24 px-4 relative overflow-hidden ${darkMode
+        ? 'bg-slate-900 border-t border-slate-800'
+        : 'bg-white border-t border-gray-200'
+        }`}
     >
       {/* Background decorations */}
       <div className="absolute top-0 right-0 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
@@ -122,9 +121,8 @@ export default function AchievementsCertifications({ darkMode = true }) {
         >
           <motion.p
             variants={itemVariants}
-            className={`text-xs font-mono font-semibold uppercase tracking-widest mb-5 ${
-              darkMode ? 'text-gray-500' : 'text-gray-400'
-            }`}
+            className={`text-xs font-mono font-semibold uppercase tracking-widest mb-5 ${darkMode ? 'text-gray-500' : 'text-gray-400'
+              }`}
           >
             Notable Achievements
           </motion.p>
@@ -135,9 +133,8 @@ export default function AchievementsCertifications({ darkMode = true }) {
                 key={ach.id}
                 variants={itemVariants}
                 whileHover={{ y: -4 }}
-                className={`relative rounded-2xl border p-6 overflow-hidden transition-all duration-300 ${
-                  ach.borderColor
-                } ${darkMode ? 'bg-slate-800/60' : 'bg-gray-50'}`}
+                className={`relative rounded-2xl border p-6 overflow-hidden transition-all duration-300 ${ach.borderColor
+                  } ${darkMode ? 'bg-slate-800/60' : 'bg-gray-50'}`}
                 style={{
                   boxShadow: `0 0 0 0 ${ach.glowColor}`,
                 }}
@@ -214,9 +211,8 @@ export default function AchievementsCertifications({ darkMode = true }) {
         >
           <motion.p
             variants={itemVariants}
-            className={`text-xs font-mono font-semibold uppercase tracking-widest mb-5 ${
-              darkMode ? 'text-gray-500' : 'text-gray-400'
-            }`}
+            className={`text-xs font-mono font-semibold uppercase tracking-widest mb-5 ${darkMode ? 'text-gray-500' : 'text-gray-400'
+              }`}
           >
             Certifications
           </motion.p>
@@ -227,25 +223,22 @@ export default function AchievementsCertifications({ darkMode = true }) {
                 key={i}
                 variants={itemVariants}
                 whileHover={{ x: 6 }}
-                className={`p-5 rounded-xl flex items-center gap-4 border transition-all duration-300 ${
-                  darkMode
-                    ? 'bg-slate-800/50 border-slate-700 hover:border-cyan-500/40'
-                    : 'bg-blue-50/60 border-gray-200 hover:border-cyan-400'
-                }`}
+                className={`p-5 rounded-xl flex items-center gap-4 border transition-all duration-300 ${darkMode
+                  ? 'bg-slate-800/50 border-slate-700 hover:border-cyan-500/40'
+                  : 'bg-blue-50/60 border-gray-200 hover:border-cyan-400'
+                  }`}
               >
                 <div
-                  className={`p-3 rounded-xl flex-shrink-0 ${
-                    darkMode ? 'bg-slate-700' : 'bg-blue-100'
-                  }`}
+                  className={`p-3 rounded-xl flex-shrink-0 ${darkMode ? 'bg-slate-700' : 'bg-blue-100'
+                    }`}
                 >
                   <Icon icon={cert.icon} width="22" height="22" className="text-cyan-400" />
                 </div>
 
                 <div className="flex-1 min-w-0">
                   <h3
-                    className={`font-bold text-sm leading-snug mb-0.5 ${
-                      darkMode ? 'text-gray-200' : 'text-gray-800'
-                    }`}
+                    className={`font-bold text-sm leading-snug mb-0.5 ${darkMode ? 'text-gray-200' : 'text-gray-800'
+                      }`}
                   >
                     {cert.title}
                   </h3>
@@ -261,11 +254,10 @@ export default function AchievementsCertifications({ darkMode = true }) {
                       {cert.skills?.map((s, j) => (
                         <span
                           key={j}
-                          className={`text-xs px-1.5 py-0.5 rounded font-mono ${
-                            darkMode
-                              ? 'bg-slate-700 text-cyan-300'
-                              : 'bg-blue-100 text-blue-700'
-                          }`}
+                          className={`text-xs px-1.5 py-0.5 rounded font-mono ${darkMode
+                            ? 'bg-slate-700 text-cyan-300'
+                            : 'bg-blue-100 text-blue-700'
+                            }`}
                         >
                           {s}
                         </span>
@@ -280,11 +272,10 @@ export default function AchievementsCertifications({ darkMode = true }) {
                   href={cert.certificateLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`p-2 rounded-lg flex-shrink-0 transition-all ${
-                    darkMode
-                      ? 'bg-slate-700 hover:bg-slate-600 text-cyan-400'
-                      : 'bg-blue-100 hover:bg-blue-200 text-blue-600'
-                  }`}
+                  className={`p-2 rounded-lg flex-shrink-0 transition-all ${darkMode
+                    ? 'bg-slate-700 hover:bg-slate-600 text-cyan-400'
+                    : 'bg-blue-100 hover:bg-blue-200 text-blue-600'
+                    }`}
                   title="View Certificate"
                 >
                   <Icon icon="mdi:external-link" width="18" height="18" />

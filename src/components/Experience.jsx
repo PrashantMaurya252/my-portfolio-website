@@ -9,6 +9,24 @@ export default function Experience({ darkMode }) {
   const experiences = [
     {
       role: 'Full Stack Developer',
+      company: 'Hiverift Softwares',
+      period: 'April 2026 – Present',
+      highlights: [
+        'Architected and developed scalable backend systems using NestJS, TypeScript, MongoDB, and Mongoose',
+        'Leading backend development of Wakeup-Makeup, a multi-vendor marketplace platform supporting 6 user roles',
+        'Implemented JWT authentication, Auth Guards, Role Guards, and RBAC for secure access control',
+        'Designed and developed Vendor Management, Influencer Management, Coupon, and Commission modules',
+        
+        // extra
+        'Built automated Vendor and Influencer payout systems based on configurable commission structures',
+        'Implemented MongoDB transactions to ensure data consistency and atomicity',
+        'Developed Cloudinary-based media management pipelines for scalable image and file handling',
+        'Built Store For Explore e-commerce platform with OTP authentication and Razorpay integration',
+        'Optimized database queries, indexing strategies, and API performance for production workloads'
+      ],
+    },
+    {
+      role: 'Full Stack Developer',
       company: 'Codenia Technologies LLP',
       period: 'Feb 2025 – March 2026',
       highlights: [
@@ -25,9 +43,7 @@ export default function Experience({ darkMode }) {
         'Integrated Gemini API for contextual AI responses and automation',
         'Enabled document data extraction using Azure OCR services',
         'Built real-time features using Socket.io (notifications, updates)',
-        'Structured backend with middleware, validation & centralized error handling',
-        'Enhanced logging system reducing debugging time by 60%',
-        'Improved frontend performance reducing load time by 40%',
+        'Enhanced logging system reducing debugging time by 60%'
       ],
     },
     {
