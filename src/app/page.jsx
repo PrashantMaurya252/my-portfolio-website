@@ -6,6 +6,7 @@ import { Icon } from '@iconify/react';
 import CurrentlyLearning from '@/components/CurrentlyLearning';
 import GitHubActivity from '@/components/GitHubActivity';
 import ProjectsSection from '@/components/ProjectCard';
+import Achievements from '@/components/Achievements';
 import AchievementsCertifications from '@/components/AchivementsCertifications';
 import Experience from '@/components/Experience';
 import PortfolioChatbot from '@/components/PortfolioChatbot';
@@ -99,8 +100,8 @@ export default function Portfolio() {
   // Card Flip Animation
   const flipVariants = {
     hidden: { opacity: 0, rotateY: -90 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       rotateY: 0,
       transition: { duration: 0.6, ease: 'easeOut' }
     },
@@ -181,17 +182,54 @@ export default function Portfolio() {
   ];
 
   const skills = {
-    'Languages': ['JavaScript (ES6+)', 'TypeScript', 'HTML5', 'CSS3'],
-    'Frontend': ['React.js', 'Next.js', 'Tailwind CSS', 'Redux Toolkit', 'Framer Motion'],
-    'Backend': ['Node.js', 'Express.js', 'Socket.io', 'RESTful APIs','Nest.js'],
-    'Databases': ['PostgreSQL', 'MongoDB', 'Prisma ORM', 'Mongoose'],
-    'DevOps & Tools': ['AWS (Basic S3,EC2)', 'Azure (OCR Service)', 'Docker (Basic)', 'Git', 'GitHub', 'Firebase','Postman', 'Browser DevTools'],
-    'Security': ['JWT', 'OAuth2', 'RBAC', 'Bcrypt'],
-    'AI & GenAI':['Prompt Engineering',
-    'LLM API Integration (OpenAI, Gemini)',
-    'AI-powered Feature Development',
-    'Response Structuring & Optimization'],
-    // 'Tools':['Postman','Browser Dev Tools','Lovable','Chatgpt','Claude']
+    'Languages': [
+      { name: 'JavaScript (ES6+)', icon: 'logos:javascript' },
+      { name: 'TypeScript', icon: 'logos:typescript-icon' },
+      { name: 'HTML5', icon: 'vscode-icons:file-type-html' },
+      { name: 'CSS3', icon: 'vscode-icons:file-type-css' },
+    ],
+    'Frontend': [
+      { name: 'React.js', icon: 'logos:react' },
+      { name: 'Next.js', icon: 'logos:nextjs-icon' },
+      { name: 'Tailwind CSS', icon: 'logos:tailwindcss-icon' },
+      { name: 'Redux Toolkit', icon: 'logos:redux' },
+      { name: 'Framer Motion', icon: 'logos:framer' },
+    ],
+    'Backend': [
+      { name: 'Node.js', icon: 'logos:nodejs-icon' },
+      { name: 'Express.js', icon: 'skill-icons:expressjs-light' },
+      { name: 'Socket.io', icon: 'logos:socket-io' },
+      { name: 'RESTful APIs', icon: 'dashicons:rest-api' },
+      { name: 'Nest.js', icon: 'logos:nestjs' },
+    ],
+    'Databases': [
+      { name: 'PostgreSQL', icon: 'logos:postgresql' },
+      { name: 'MongoDB', icon: 'logos:mongodb-icon' },
+      { name: 'Prisma ORM', icon: 'logos:prisma' },
+      { name: 'Mongoose', icon: 'devicon:mongoose' },
+    ],
+    'DevOps & Tools': [
+      { name: 'AWS (Basic)', icon: 'logos:aws' },
+      { name: 'Azure (OCR)', icon: 'logos:microsoft-azure' },
+      { name: 'Docker (Basic)', icon: 'logos:docker-icon' },
+      { name: 'Git', icon: 'logos:git-icon' },
+      { name: 'GitHub', icon: 'mdi:github' },
+      { name: 'Firebase', icon: 'logos:firebase' },
+      { name: 'Postman', icon: 'logos:postman-icon' },
+      { name: 'Browser DevTools', icon: 'logos:chrome' },
+    ],
+    'Security': [
+      { name: 'JWT', icon: 'logos:jwt-icon' },
+      { name: 'OAuth2', icon: 'logos:oauth' },
+      { name: 'RBAC', icon: 'eos-icons:role-binding' },
+      { name: 'Bcrypt', icon: 'mdi:security' },
+    ],
+    'AI & GenAI': [
+      { name: 'Prompt Engineering', icon: 'fluent:brain-circuit-20-filled' },
+      { name: 'LLM API Integration', icon: 'logos:openai-icon' },
+      { name: 'AI Feature Development', icon: 'eos-icons:ai' },
+      { name: 'Response Optimization', icon: 'mdi:chart-bell-curve' },
+    ],
   };
 
   const certifications = [
@@ -225,11 +263,10 @@ export default function Portfolio() {
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`fixed top-0 w-full z-50 backdrop-blur-md ${
-          darkMode
+        className={`fixed top-0 w-full z-50 backdrop-blur-md ${darkMode
             ? 'bg-slate-900/80 border-slate-700'
             : 'bg-white/80 border-gray-200'
-        } border-b transition-all duration-300`}
+          } border-b transition-all duration-300`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -245,13 +282,12 @@ export default function Portfolio() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`relative text-sm font-medium transition-colors ${
-                    activeNav === item.id
+                  className={`relative text-sm font-medium transition-colors ${activeNav === item.id
                       ? 'text-cyan-400'
                       : darkMode
-                      ? 'text-gray-400 hover:text-cyan-400'
-                      : 'text-gray-600 hover:text-cyan-500'
-                  }`}
+                        ? 'text-gray-400 hover:text-cyan-400'
+                        : 'text-gray-600 hover:text-cyan-500'
+                    }`}
                 >
                   {item.label}
                   {activeNav === item.id && (
@@ -267,11 +303,10 @@ export default function Portfolio() {
 
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className={`p-2 rounded-lg transition-colors ${
-                darkMode
+              className={`p-2 rounded-lg transition-colors ${darkMode
                   ? 'bg-slate-800 hover:bg-slate-700'
                   : 'bg-gray-200 hover:bg-gray-300'
-              }`}
+                }`}
             >
               <Icon
                 icon={darkMode ? 'material-symbols:light-mode' : 'material-symbols:dark-mode'}
@@ -286,9 +321,8 @@ export default function Portfolio() {
       {/* Hero Section with Text Reveal & Floating Background */}
       <section
         id="about"
-        className={`min-h-screen flex items-center justify-center px-4 pt-20 relative overflow-hidden ${
-          darkMode ? 'bg-gradient-to-br from-slate-900 via-blue-900/20' : 'bg-gradient-to-br from-blue-50 to-cyan-50'
-        }`}
+        className={`min-h-screen flex items-center justify-center px-4 pt-20 relative overflow-hidden ${darkMode ? 'bg-gradient-to-br from-slate-900 via-blue-900/20' : 'bg-gradient-to-br from-blue-50 to-cyan-50'
+          }`}
       >
         {/* Floating Background Elements */}
         <motion.div
@@ -316,9 +350,8 @@ export default function Portfolio() {
               <motion.div
                 animate="animate"
                 variants={rotateVariants}
-                className={`inline-block p-4 rounded-full ${
-                  darkMode ? 'bg-slate-800 border border-slate-700' : 'bg-blue-100 border border-blue-300'
-                }`}
+                className={`inline-block p-4 rounded-full ${darkMode ? 'bg-slate-800 border border-slate-700' : 'bg-blue-100 border border-blue-300'
+                  }`}
               >
                 <Icon icon="material-symbols:code" width="48" height="48" className="text-cyan-400" />
               </motion.div>
@@ -329,7 +362,7 @@ export default function Portfolio() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
+              className="text-3xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
             >
               {['Prashant', 'Kumar', 'Maurya'].map((word, i) => (
                 <motion.span
@@ -350,11 +383,10 @@ export default function Portfolio() {
                   <motion.span
                     key={i}
                     whileHover={{ scale: 1.1, y: -5 }}
-                    className={`px-4 py-2 rounded-full text-sm font-medium ${
-                      darkMode
+                    className={`px-4 py-2 rounded-full text-sm font-medium ${darkMode
                         ? 'bg-slate-800 text-cyan-300 border border-cyan-500/30'
                         : 'bg-blue-100 text-blue-700 border border-blue-300'
-                    }`}
+                      }`}
                   >
                     {role}
                   </motion.span>
@@ -364,9 +396,8 @@ export default function Portfolio() {
 
             <motion.p
               variants={itemVariants}
-              className={`text-lg md:text-xl max-w-2xl mx-auto mb-8 leading-relaxed ${
-                darkMode ? 'text-gray-400' : 'text-gray-600'
-              }`}
+              className={`text-lg md:text-xl max-w-2xl mx-auto mb-8 leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'
+                }`}
             >
               Full Stack Developer (MERN) building scalable, production-ready applications with real-time features, secure authentication, and AI-powered functionality using LLM APIs.
             </motion.p>
@@ -416,11 +447,10 @@ export default function Portfolio() {
                   rel={!social.isEmail ? 'noopener noreferrer' : undefined}
                   whileHover={{ scale: 1.2, y: -5 }}
                   whileTap={{ scale: 0.9 }}
-                  className={`p-3 rounded-lg ${
-                    darkMode
+                  className={`p-3 rounded-lg ${darkMode
                       ? 'bg-slate-800 hover:bg-slate-700 text-cyan-400'
                       : 'bg-blue-100 hover:bg-blue-200 text-blue-600'
-                  }`}
+                    }`}
                   title={social.label}
                 >
                   <motion.div
@@ -436,12 +466,13 @@ export default function Portfolio() {
         </div>
       </section>
 
+      <Achievements darkMode={darkMode} />
+
       {/* Skills Section with Stagger Icons & Progress Bars */}
       <section
         id="skills"
-        className={`py-20 px-4 ${
-          darkMode ? 'bg-slate-950 border-t border-slate-800' : 'bg-gray-50 border-t border-gray-200'
-        }`}
+        className={`py-20 px-4 ${darkMode ? 'bg-slate-950 border-t border-slate-800' : 'bg-gray-50 border-t border-gray-200'
+          }`}
       >
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -470,11 +501,10 @@ export default function Portfolio() {
                 key={category}
                 variants={itemVariants}
                 whileHover={{ y: -5 }}
-                className={`p-6 rounded-lg backdrop-blur-sm ${
-                  darkMode
+                className={`p-6 rounded-lg backdrop-blur-sm ${darkMode
                     ? 'bg-slate-800/50 border border-slate-700 hover:border-cyan-500/50'
                     : 'bg-white/50 border border-gray-200 hover:border-cyan-400'
-                } transition-all duration-300`}
+                  } transition-all duration-300`}
               >
                 <motion.h3
                   // animate="animate"
@@ -484,30 +514,43 @@ export default function Portfolio() {
                   <Icon icon={['mdi:language-javascript', 'mdi:react', 'mdi:nodejs', 'mdi:database', 'mdi:cloud', 'mdi:shield-lock'][categoryIndex]} width="20" height="20" />
                   {category}
                 </motion.h3>
-                <div className="space-y-3">
+                <div className="flex flex-wrap gap-4 mt-4">
                   {items.map((skill, i) => (
                     <motion.div
                       key={i}
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ delay: i * 0.05 }}
                       viewport={{ once: true }}
+                      whileHover={{ y: -5, scale: 1.1 }}
+                      className={`group relative flex flex-col items-center justify-center w-24 h-24 p-3 rounded-xl transition-all cursor-pointer ${darkMode
+                          ? 'bg-slate-700/50 hover:bg-slate-700 hover:shadow-[0_0_15px_rgba(34,211,238,0.2)]'
+                          : 'bg-white hover:bg-gray-50 hover:shadow-lg'
+                        }`}
                     >
-                      <div className="flex items-center justify-between mb-1">
-                        <span className={`text-sm font-medium ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                          {skill}
-                        </span>
-                      </div>
-                      <motion.div
-                        custom={i}
-                        variants={progressVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        className={`h-2 rounded-full ${
-                          i % 3 === 0 ? 'bg-cyan-400' : i % 3 === 1 ? 'bg-blue-400' : 'bg-purple-400'
-                        } origin-left`}
+                      <Icon
+                        icon={skill.icon}
+                        width="40"
+                        height="40"
+                        className={
+                          skill.icon.startsWith('mdi:') ||
+                            skill.icon.startsWith('fluent:') ||
+                            skill.icon.startsWith('eos-icons:') ||
+                            skill.icon.startsWith('dashicons:')
+                            ? (darkMode ? 'text-cyan-400' : 'text-blue-600')
+                            : ''
+                        }
                       />
+                      <span className={`mt-2 text-[10px] font-medium text-center leading-tight ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                        {skill.name}
+                      </span>
+
+                      {/* Tooltip */}
+                      <div className="absolute -top-10 opacity-0 group-hover:opacity-100 transition-opacity bg-gray-900 dark:bg-black text-white text-xs py-1.5 px-3 rounded-lg whitespace-nowrap z-10 pointer-events-none shadow-xl border border-gray-700">
+                        {skill.name}
+                        {/* Tooltip Arrow */}
+                        <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-900 dark:bg-black rotate-45 border-b border-r border-gray-700"></div>
+                      </div>
                     </motion.div>
                   ))}
                 </div>
@@ -517,23 +560,22 @@ export default function Portfolio() {
         </div>
       </section>
 
-     
+
 
       <CurrentlyLearning darkMode={darkMode} />
-<GitHubActivity darkMode={darkMode} />
-<LeetCodeActivity darkMode={darkMode} />
-<ProjectsSection darkMode={darkMode} />
-<AchievementsCertifications darkMode={darkMode} />
-<PortfolioChatbot darkMode={darkMode}/>
+      <GitHubActivity darkMode={darkMode} />
+      <LeetCodeActivity darkMode={darkMode} />
+      <ProjectsSection darkMode={darkMode} />
+      <AchievementsCertifications darkMode={darkMode} />
+      <PortfolioChatbot darkMode={darkMode} />
 
-     
+
 
       {/* Contact Section with Icon Animations */}
       <section
         id="contact"
-        className={`py-20 px-4 ${
-          darkMode ? 'bg-slate-950 border-t border-slate-800' : 'bg-gray-50 border-t border-gray-200'
-        }`}
+        className={`py-20 px-4 ${darkMode ? 'bg-slate-950 border-t border-slate-800' : 'bg-gray-50 border-t border-gray-200'
+          }`}
       >
         <div className="max-w-2xl mx-auto">
           <motion.div
@@ -555,11 +597,10 @@ export default function Portfolio() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             onSubmit={handleFormSubmit}
-            className={`space-y-6 p-8 rounded-lg ${
-              darkMode
+            className={`space-y-6 p-8 rounded-lg ${darkMode
                 ? 'bg-slate-800/50 border border-slate-700'
                 : 'bg-white border border-gray-200'
-            }`}
+              }`}
           >
             <div>
               <label className="block text-sm font-semibold text-cyan-400 mb-2">Name</label>
@@ -568,11 +609,10 @@ export default function Portfolio() {
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 required
-                className={`w-full px-4 py-3 rounded-lg border transition-all ${
-                  darkMode
+                className={`w-full px-4 py-3 rounded-lg border transition-all ${darkMode
                     ? 'bg-slate-700 border-slate-600 text-white placeholder-gray-400 focus:border-cyan-500'
                     : 'bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-400'
-                } focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
+                  } focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
                 placeholder="Your name"
               />
             </div>
@@ -584,11 +624,10 @@ export default function Portfolio() {
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 required
-                className={`w-full px-4 py-3 rounded-lg border transition-all ${
-                  darkMode
+                className={`w-full px-4 py-3 rounded-lg border transition-all ${darkMode
                     ? 'bg-slate-700 border-slate-600 text-white placeholder-gray-400 focus:border-cyan-500'
                     : 'bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-400'
-                } focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
+                  } focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
                 placeholder="your@email.com"
               />
             </div>
@@ -600,11 +639,10 @@ export default function Portfolio() {
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 required
                 rows="5"
-                className={`w-full px-4 py-3 rounded-lg border transition-all ${
-                  darkMode
+                className={`w-full px-4 py-3 rounded-lg border transition-all ${darkMode
                     ? 'bg-slate-700 border-slate-600 text-white placeholder-gray-400 focus:border-cyan-500'
                     : 'bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-cyan-400'
-                } focus:outline-none focus:ring-2 focus:ring-cyan-400/20 resize-none`}
+                  } focus:outline-none focus:ring-2 focus:ring-cyan-400/20 resize-none`}
                 placeholder="Your message here..."
               />
             </div>
@@ -646,11 +684,10 @@ export default function Portfolio() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="mailto:prashantmaurya252@outlook.com"
-                className={`px-6 py-2 rounded-lg font-medium transition-all flex items-center justify-center gap-2 ${
-                  darkMode
+                className={`px-6 py-2 rounded-lg font-medium transition-all flex items-center justify-center gap-2 ${darkMode
                     ? 'bg-slate-800 text-cyan-400 hover:bg-slate-700'
                     : 'bg-blue-100 text-blue-600 hover:bg-blue-200'
-                }`}
+                  }`}
               >
                 <motion.div
                   animate={{ rotate: [0, 5, -5, 0] }}
@@ -664,11 +701,10 @@ export default function Portfolio() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="tel:+916306315885"
-                className={`px-6 py-2 rounded-lg font-medium transition-all flex items-center justify-center gap-2 ${
-                  darkMode
+                className={`px-6 py-2 rounded-lg font-medium transition-all flex items-center justify-center gap-2 ${darkMode
                     ? 'bg-slate-800 text-cyan-400 hover:bg-slate-700'
                     : 'bg-blue-100 text-blue-600 hover:bg-blue-200'
-                }`}
+                  }`}
               >
                 <motion.div
                   animate={{ scale: [1, 1.2, 1] }}
@@ -685,9 +721,8 @@ export default function Portfolio() {
 
       {/* Footer */}
       <footer
-        className={`py-8 px-4 ${
-          darkMode ? 'bg-slate-900 border-t border-slate-800' : 'bg-gray-100 border-t border-gray-200'
-        }`}
+        className={`py-8 px-4 ${darkMode ? 'bg-slate-900 border-t border-slate-800' : 'bg-gray-100 border-t border-gray-200'
+          }`}
       >
         <div className="max-w-6xl mx-auto text-center">
           <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -707,7 +742,7 @@ export default function Portfolio() {
         >
           <Icon icon="material-symbols:mail" width="24" height="24" />
         </motion.button>
-        
+
         {/* WhatsApp Button - Visible Everywhere */}
         <motion.a
           whileHover={{ scale: 1.1 }}
