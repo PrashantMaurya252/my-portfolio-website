@@ -279,6 +279,17 @@ function ProjectModal({ project, darkMode, onClose }) {
                   Live Demo
                 </a>
               )}
+              {project.pptLink && (
+                <a
+                  href={project.pptLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex-1 py-2.5 rounded-lg border-2 border-orange-400 text-orange-400 font-semibold flex items-center justify-center gap-2 hover:bg-orange-400 hover:text-slate-900 transition-all`}
+                >
+                  <Icon icon="mdi:presentation-play" width="18" height="18" />
+                  PPT
+                </a>
+              )}
             </div>
           </div>
         </motion.div>
@@ -484,6 +495,22 @@ export function ProjectCard({ project, darkMode = true }) {
             >
               <Icon icon="mdi:open-in-new" width="16" height="16" />
             </motion.a>
+            {project.pptLink && (
+              <motion.a
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                href={project.pptLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`px-3 py-2 rounded-lg border text-sm font-medium flex items-center gap-1.5 transition-all ${
+                  darkMode
+                    ? 'border-slate-600 text-gray-400 hover:border-orange-400 hover:text-orange-400'
+                    : 'border-gray-200 text-gray-500 hover:border-orange-400 hover:text-orange-500'
+                }`}
+              >
+                <Icon icon="mdi:presentation-play" width="16" height="16" />
+              </motion.a>
+            )}
           </div>
         </div>
       </motion.div>
@@ -502,6 +529,64 @@ export function ProjectCard({ project, darkMode = true }) {
 
 // ─── Projects Section (uses ProjectCard) ─────────────────────────────────────
 const sampleProjects = [
+  {
+    title: 'Desi Market (E-Commerce Platform)',
+    tags: ['Next.js', 'Node.js', 'PostgreSQL', 'Redis', 'BullMQ', 'Docker'],
+    description: 'Full-stack e-commerce platform with Redis caching, asynchronous email processing, and secure payments.',
+    longDescription:
+      'Production-grade e-commerce platform with Redis caching for 10x faster responses, background jobs via BullMQ, JWT + Google OAuth dual authentication, secure role-based access control, Stripe Payment Intents, and containerized deployment with Docker on a VPS.',
+    highlights: [
+      'JWT + Google OAuth dual authentication & RBAC',
+      'Redis caching reducing response time by 10x',
+      'BullMQ with Redis for background jobs and emails',
+      'Stripe Payment Intents with webhook handling',
+      'Dockerized and deployed on VPS with SSL/HTTPS',
+    ],
+    techBreakdown: [
+      { layer: 'Frontend', percent: 35 },
+      { layer: 'Backend', percent: 35 },
+      { layer: 'Caching & Jobs', percent: 20 },
+      { layer: 'DevOps', percent: 10 },
+    ],
+    images: [
+      { src: '/images/e-commerce-1.png', alt: 'Home' },
+      { src: '/images/e-commerce-2.png', alt: 'Products' },
+      { src: '/images/e-commerce-3.png', alt: 'Cart' },
+      { src: '/images/e-commerce-4.png', alt: 'Dashboard' },
+    ],
+    githubLink: 'https://github.com/PrashantMaurya252/e-commerce-with-postgre-and-prisma',
+    liveLink: 'https://shop.prashantmaurya.online',
+    pptLink: 'https://docs.google.com/presentation/d/1ILhkjARp6wkXzlaGblnThj2_o0FlgqCp/edit?usp=sharing&ouid=104337173772584107412&rtpof=true&sd=true',
+  },
+  {
+    title: 'Job Scout (Management Tool)',
+    tags: ['Next.js', 'Node.js', 'MongoDB', 'Gemini API', 'Playwright', 'Node-Cron'],
+    description: 'Personal job management platform to track applications and automate personalized recruiter outreach.',
+    longDescription:
+      'A personal job management platform designed to track job applications, companies, hiring managers, and recruiter contacts. It leverages the Gemini API to analyze job descriptions and generate job-match scores, and uses Playwright and Node-Cron to automate personalized outreach emails.',
+    highlights: [
+      'Centralized tracking for applications and recruiters',
+      'Gemini API integration for job-match scores',
+      'Automated personalized outreach emails',
+      'Playwright and Node-Cron for scheduled scouting',
+      'Dockerized container deployment',
+    ],
+    techBreakdown: [
+      { layer: 'Frontend', percent: 30 },
+      { layer: 'Backend', percent: 40 },
+      { layer: 'AI Integration', percent: 20 },
+      { layer: 'Automation', percent: 10 },
+    ],
+    images: [
+      { src: '/images/JobScout1.png', alt: 'Home' },
+      { src: '/images/JobScout2.png', alt: 'Dashboard' },
+      { src: '/images/JobScout3.png', alt: 'Jobs' },
+      { src: '/images/JobScout4.png', alt: 'Settings' },
+    ],
+    githubLink: 'https://github.com/PrashantMaurya252/personal-management-tool',
+    liveLink: 'https://jobscout.prashantmaurya.online',
+    pptLink: 'https://docs.google.com/presentation/d/19tAm1PrqFimu3hODBjX8vsSaK5h-kmp_/edit?usp=sharing&ouid=104337173772584107412&rtpof=true&sd=true',
+  },
   {
     title: 'Instagram Clone',
     tags: ['MERN', 'Socket.io', 'Redux', 'Cloudinary', 'MongoDB'],
@@ -530,64 +615,6 @@ const sampleProjects = [
     ],
     githubLink: 'https://github.com/PrashantMaurya252/instagram-clone',
     liveLink: 'https://instagram-clone-awa2.onrender.com/login',
-  },
-  {
-    title: 'E-Commerce Platform',
-    tags: ['Next.js', 'Node.js', 'PostgreSQL', 'Stripe', 'Prisma', 'TypeScript'],
-    description: 'Type-safe e-commerce platform with secure payments, inventory management, and optimized queries.',
-    longDescription:
-      'Production-grade e-commerce built with Next.js and TypeScript. Features JWT + Google OAuth, Stripe Payment Intents with webhooks, real-time inventory management, advanced filtering, and optimized PostgreSQL queries via Prisma.',
-    highlights: [
-      'JWT + Google OAuth2 dual authentication',
-      'Stripe Payment Intents with webhook handling',
-      'Real-time inventory & shopping cart sync',
-      'Advanced product filtering & full-text search',
-      'Order history, returns & dispute tracking',
-      '45% faster queries via schema optimization',
-    ],
-    techBreakdown: [
-      { layer: 'Frontend', percent: 40 },
-      { layer: 'Backend', percent: 30 },
-      { layer: 'Database', percent: 20 },
-      { layer: 'Payments', percent: 10 },
-    ],
-    images: [
-      { src: '/images/e-commerce-1.png', alt: 'Home' },
-      { src: '/images/e-commerce-2.png', alt: 'Products' },
-      { src: '/images/e-commerce-3.png', alt: 'Cart' },
-      { src: '/images/e-commerce-4.png', alt: 'Dashboard' },
-    ],
-    githubLink: 'https://github.com/PrashantMaurya252/e-commerce-with-postgre-and-prisma',
-    liveLink: 'https://e-commerce-with-postgre-and-prisma.vercel.app/auth/login',
-  },
-  {
-    title: 'MERN Blog Platform',
-    tags: ['MERN', 'Redux', 'Firebase', 'Vite', 'MongoDB'],
-    description: 'Full-featured blogging platform with analytics dashboard and role-based access control.',
-    longDescription:
-      'A complete blogging platform with an admin analytics dashboard, full-text search, draft/publish workflow, RBAC for authors and admins, dark/light theme, and 30-day content trend visualizations.',
-    highlights: [
-      'Admin dashboard with 30-day analytics trends',
-      'Full-text search & category filtering',
-      'Draft → Review → Published workflow',
-      'Role-based access (Author, Editor, Admin)',
-      'Dark/light theme with system detection',
-      'Responsive design with offline support',
-    ],
-    techBreakdown: [
-      { layer: 'Frontend', percent: 50 },
-      { layer: 'Backend', percent: 30 },
-      { layer: 'Auth', percent: 12 },
-      { layer: 'Analytics', percent: 8 },
-    ],
-    images: [
-      { src: '/images/blog-pic-1.png', alt: 'Blog Home' },
-      { src: '/images/blog-pic-2.png', alt: 'Post View' },
-      { src: '/images/blog-pic-3.png', alt: 'Admin Panel' },
-      { src: '/images/blog-pic-4.png', alt: 'Editor' },
-    ],
-    githubLink: 'https://github.com/PrashantMaurya252/blog-app',
-    liveLink: 'https://mern-blog-m5rc.onrender.com/',
   },
 ]
 

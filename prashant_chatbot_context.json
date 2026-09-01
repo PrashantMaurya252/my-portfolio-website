@@ -4,38 +4,50 @@
   "summary": "Full Stack Developer with 2+ years of experience building scalable web applications using MERN stack and PostgreSQL. Skilled in backend architecture, authentication systems, and performance optimization. Experienced in integrating AI solutions using OpenAI and Gemini APIs.",
   "skills": {
     "languages": [
-      "JavaScript",
+      "JavaScript (ES6+)",
       "TypeScript"
     ],
     "frontend": [
       "React.js",
       "Next.js",
       "Redux Toolkit",
-      "Tailwind CSS"
+      "Tailwind CSS",
+      "Material UI"
     ],
     "backend": [
       "Node.js",
       "Express.js",
+      "NestJS",
       "REST APIs",
-      "Socket.io",
-      "Nest.js"
+      "Socket.io"
     ],
     "databases": [
       "PostgreSQL (Prisma)",
-      "MongoDB"
+      "MongoDB (Mongoose)"
+    ],
+    "system_design_and_caching": [
+      "Scalable Architecture",
+      "Redis",
+      "BullMQ",
+      "Caching"
     ],
     "cloud_tools": [
-      "AWS (S3, EC2)",
-      "Azure (OCR)",
+      "AWS (S3)",
+      "VPS Deployment",
       "Docker",
-      "Git",
-      "Stripe",
-      "Firebase"
+      "PM2",
+      "GitHub"
     ],
     "security": [
       "JWT",
       "OAuth2",
-      "RBAC"
+      "RBAC",
+      "Bcrypt"
+    ],
+    "ai": [
+      "LLM Integration",
+      "OpenAI API",
+      "Gemini API"
     ]
   },
   "experience": [
@@ -92,44 +104,51 @@
   ],
   "projects": [
     {
-      "name": "E-commerce Platform",
+      "name": "Desi Market (E-Commerce Platform)",
       "tech": [
         "Next.js",
         "Node.js",
+        "TypeScript",
         "PostgreSQL",
-        "Prisma",
-        "Stripe"
+        "Redis",
+        "BullMQ",
+        "Docker"
       ],
       "features": [
-        "authentication",
+        "JWT + Google OAuth",
         "payments",
-        "cart",
-        "filtering",
-        "order tracking"
+        "Redis caching",
+        "background jobs"
+      ]
+    },
+    {
+      "name": "Job Scout (Personal Management Tool)",
+      "tech": [
+        "Next.js",
+        "Node.js",
+        "MongoDB",
+        "Gemini API",
+        "Node-Cron",
+        "Docker"
+      ],
+      "features": [
+        "job match scoring",
+        "automated outreach emails",
+        "Playwright web scraping"
       ]
     },
     {
       "name": "Instagram Clone",
       "tech": [
         "MERN",
-        "Socket.io"
+        "Socket.io",
+        "Cloudinary"
       ],
       "features": [
         "chat",
         "notifications",
-        "real-time updates"
-      ]
-    },
-    {
-      "name": "Blog Platform",
-      "tech": [
-        "MERN"
-      ],
-      "features": [
-        "CRUD",
-        "admin dashboard",
-        "search",
-        "pagination"
+        "real-time updates",
+        "image optimization"
       ]
     }
   ],
