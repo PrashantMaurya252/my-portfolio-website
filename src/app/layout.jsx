@@ -3,7 +3,8 @@ import "./globals.css";
 import { Icon } from "@iconify/react";
 import ComputerNavbar from "@/components/ComputerNavbar";
 import { Inter } from 'next/font/google'
-import {Analytics} from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/react';
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 
 const geistSans = localFont({
@@ -31,49 +32,50 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 
-  const navItems =[
+  const navItems = [
     {
-      id:1,
-      label:'About Me',
-      path:'/',
-      icon:<Icon icon="material-symbols:person" width="1.2em" height="1.2em"  style={{color: 'gray'}} />
+      id: 1,
+      label: 'About Me',
+      path: '/',
+      icon: <Icon icon="material-symbols:person" width="1.2em" height="1.2em" style={{ color: 'gray' }} />
 
     },
     {
-      id:2,
-      label:'Skills',
-      path:'/skills',
-      icon:<Icon icon="game-icons:skills" width="1.2em" height="1.2em"  style={{color: 'gray'}} />
+      id: 2,
+      label: 'Skills',
+      path: '/skills',
+      icon: <Icon icon="game-icons:skills" width="1.2em" height="1.2em" style={{ color: 'gray' }} />
 
     },
     {
-      id:3,
-      label:'Projects',
-      path:'/projects',
-      icon:<Icon icon="academicons:ideas-repec" width="1.2em" height="1.2em"  style={{color: 'gray'}} />
+      id: 3,
+      label: 'Projects',
+      path: '/projects',
+      icon: <Icon icon="academicons:ideas-repec" width="1.2em" height="1.2em" style={{ color: 'gray' }} />
 
     },
     {
-      id:4,
-      label:'Experience',
-      path:'/experience',
-      icon:<Icon icon="academicons:ideas-repec" width="1.2em" height="1.2em"  style={{color: 'gray'}} />
+      id: 4,
+      label: 'Experience',
+      path: '/experience',
+      icon: <Icon icon="academicons:ideas-repec" width="1.2em" height="1.2em" style={{ color: 'gray' }} />
 
     },
     {
-      id:5,
-      label:'Education/Certificates',
-      path:'/education',
-      icon:<Icon icon="ph:certificate-fill" width="1.2em" height="1.2em"  style={{color: 'gray'}}  />
+      id: 5,
+      label: 'Education/Certificates',
+      path: '/education',
+      icon: <Icon icon="ph:certificate-fill" width="1.2em" height="1.2em" style={{ color: 'gray' }} />
 
     },
-   
+
   ]
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <GoogleAnalytics />
         {children}
         <Analytics />
       </body>

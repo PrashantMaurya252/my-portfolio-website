@@ -8,7 +8,7 @@ export const portfolioData = {
     roles: ["Frontend Developer", "Backend Developer", "Full Stack Engineer"],
     email: "prashantmaurya252@outlook.com",
     phone: "+91 6306315885",
-    resumeLink: "https://drive.google.com/file/d/1PHTpf4RFuh_jKqLpsB8gsJIukm49zV1P/view?usp=sharing",
+    resumeLink: "https://drive.google.com/file/d/1KCkBKjmZl05idpYbv17mywnpxEYjsdnK/view?usp=sharing",
     bio: "2+ years of proven expertise in building production-grade web applications using MERN stack & PostgreSQL. Specialized in backend architecture with NestJS, secure authentication, real-time features, cloud integrations, and complex business workflows.",
     social: {
       github: "https://github.com/PrashantMaurya252",

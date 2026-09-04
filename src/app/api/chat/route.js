@@ -14,7 +14,7 @@ EMAIL: prashantmaurya252@outlook.com
 PHONE: +91 6306315885
 GITHUB: [GitHub](https://github.com/PrashantMaurya252)
 LINKEDIN: [LinkedIn](https://www.linkedin.com/in/pkm252/)
-RESUME: [Download Resume](https://drive.google.com/file/d/1PHTpf4RFuh_jKqLpsB8gsJIukm49zV1P/view?usp=sharing)
+RESUME: [Download Resume](https://drive.google.com/file/d/1KCkBKjmZl05idpYbv17mywnpxEYjsdnK/view?usp=sharing)
 LEETCODE: [LeetCode](https://leetcode.com/u/Prashant_Maurya2000/)
 WHATSAPP: [Message Me](https://wa.me/916306315885)
 
