@@ -11,6 +11,7 @@ import AchievementsCertifications from '@/components/AchivementsCertifications';
 import Experience from '@/components/Experience';
 import PortfolioChatbot from '@/components/PortfolioChatbot';
 import LeetCodeActivity from '@/components/LeetCodeActivity';
+import { trackClick } from '@/components/AnalyticsTracker';
 
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(true);
@@ -205,6 +206,7 @@ export default function Portfolio() {
     'Databases & Caching': [
       { name: 'PostgreSQL (Prisma)', icon: 'logos:postgresql' },
       { name: 'MongoDB (Mongoose)', icon: 'logos:mongodb-icon' },
+      { name: 'MySQL', icon: 'logos:mysql' },
       { name: 'Redis', icon: 'logos:redis' },
       { name: 'BullMQ', icon: 'mdi:bullseye' },
     ],
@@ -221,9 +223,11 @@ export default function Portfolio() {
       { name: 'PM2', icon: 'mdi:server-security' },
       { name: 'GitHub', icon: 'mdi:github' },
     ],
-    'AI & GenAI': [
-      { name: 'LLM Integration', icon: 'logos:openai-icon' },
-      { name: 'OpenAI API', icon: 'logos:openai-icon' },
+    'AI Tools': [
+      { name: 'ChatGPT', icon: 'logos:openai-icon' },
+      { name: 'Claude', icon: 'logos:anthropic-icon' },
+      { name: 'Cursor', icon: 'hugeicons:cursor-magic-selection-02' },
+      { name: 'Antigravity', icon: 'mdi:rocket-launch' },
       { name: 'Gemini API', icon: 'logos:google-gemini' },
       { name: 'Prompt Engineering', icon: 'fluent:brain-circuit-20-filled' },
     ],
@@ -396,7 +400,7 @@ export default function Portfolio() {
               className={`text-lg md:text-xl max-w-2xl mx-auto mb-8 leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'
                 }`}
             >
-              Full Stack Developer (MERN) building scalable, production-ready applications with real-time features, secure authentication, and AI-powered functionality using LLM APIs.
+              Full Stack Developer capable of designing and developing systems from scratch—handling everything from frontend and backend to testing, debugging, and deployment. I leverage AI tools like Antigravity, Cursor, and ChatGPT to fast-track development and solve complex problems efficiently.
             </motion.p>
 
             {/* Button Hover Animations */}
@@ -410,6 +414,7 @@ export default function Portfolio() {
                 href="https://drive.google.com/file/d/1KCkBKjmZl05idpYbv17mywnpxEYjsdnK/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackClick('Resume Download')}
                 className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg transition-all flex items-center gap-2"
               >
                 <motion.div
@@ -442,6 +447,7 @@ export default function Portfolio() {
                   href={social.url}
                   target={!social.isEmail ? '_blank' : undefined}
                   rel={!social.isEmail ? 'noopener noreferrer' : undefined}
+                  onClick={() => trackClick(social.label)}
                   whileHover={{ scale: 1.2, y: -5 }}
                   whileTap={{ scale: 0.9 }}
                   className={`p-3 rounded-lg ${darkMode
@@ -681,6 +687,7 @@ export default function Portfolio() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="mailto:prashantmaurya252@outlook.com"
+                onClick={() => trackClick('Email')}
                 className={`px-6 py-2 rounded-lg font-medium transition-all flex items-center justify-center gap-2 ${darkMode
                     ? 'bg-slate-800 text-cyan-400 hover:bg-slate-700'
                     : 'bg-blue-100 text-blue-600 hover:bg-blue-200'

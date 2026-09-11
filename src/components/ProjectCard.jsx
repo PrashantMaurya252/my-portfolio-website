@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Icon } from '@iconify/react'
+import { trackClick } from '@/components/AnalyticsTracker'
 
 // ─── ProjectCard ─────────────────────────────────────────────────────────────
 // Props:
@@ -473,6 +474,7 @@ export function ProjectCard({ project, darkMode = true }) {
               href={project.githubLink}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackClick(project.title)}
               className={`px-3 py-2 rounded-lg border text-sm font-medium flex items-center gap-1.5 transition-all ${
                 darkMode
                   ? 'border-slate-600 text-gray-400 hover:border-cyan-400 hover:text-cyan-400'
@@ -487,6 +489,7 @@ export function ProjectCard({ project, darkMode = true }) {
               href={project.liveLink}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackClick(project.title)}
               className={`px-3 py-2 rounded-lg border text-sm font-medium flex items-center gap-1.5 transition-all ${
                 darkMode
                   ? 'border-slate-600 text-gray-400 hover:border-cyan-400 hover:text-cyan-400'
@@ -502,6 +505,7 @@ export function ProjectCard({ project, darkMode = true }) {
                 href={project.pptLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackClick(`${project.title} - PPT`)}
                 className={`px-3 py-2 rounded-lg border text-sm font-medium flex items-center gap-1.5 transition-all ${
                   darkMode
                     ? 'border-slate-600 text-gray-400 hover:border-orange-400 hover:text-orange-400'

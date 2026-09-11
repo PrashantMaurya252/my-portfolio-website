@@ -5,6 +5,7 @@ import ComputerNavbar from "@/components/ComputerNavbar";
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react';
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import AnalyticsTracker from "@/components/AnalyticsTracker";
 
 
 const geistSans = localFont({
@@ -76,6 +77,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <GoogleAnalytics />
+        <AnalyticsTracker />
         {children}
         <Analytics />
       </body>

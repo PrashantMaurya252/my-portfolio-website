@@ -9,7 +9,7 @@ export const portfolioData = {
     email: "prashantmaurya252@outlook.com",
     phone: "+91 6306315885",
     resumeLink: "https://drive.google.com/file/d/1KCkBKjmZl05idpYbv17mywnpxEYjsdnK/view?usp=sharing",
-    bio: "2+ years of proven expertise in building production-grade web applications using MERN stack & PostgreSQL. Specialized in backend architecture with NestJS, secure authentication, real-time features, cloud integrations, and complex business workflows.",
+    bio: "Full Stack Developer capable of designing and developing systems from scratch—handling everything from frontend and backend to testing, debugging, and deployment. I leverage AI tools like Antigravity, Cursor, and ChatGPT to fast-track development and solve complex problems efficiently.",
     social: {
       github: "https://github.com/PrashantMaurya252",
       linkedin: "https://linkedin.com/in/prashant-kumar-maurya",
@@ -23,10 +23,10 @@ export const portfolioData = {
     "Languages": ["JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "SQL"],
     "Frontend": ["React.js", "Next.js", "Redux Toolkit", "Tailwind CSS", "Material UI", "Framer Motion", "ShadCN UI"],
     "Backend": ["Node.js", "Express.js", "NestJS", "REST API Design", "Socket.io", "Microservices"],
-    "Databases & Caching": ["PostgreSQL (Prisma)", "MongoDB (Mongoose)", "Redis", "BullMQ"],
+    "Databases & Caching": ["PostgreSQL (Prisma)", "MongoDB (Mongoose)", "MySQL", "Redis", "BullMQ"],
     "System Design": ["Scalable Architecture", "API Design", "Caching", "RBAC"],
     "Cloud & DevOps": ["AWS (S3)", "VPS Deployment", "Docker", "PM2", "GitHub Actions", "CI/CD"],
-    "AI / GenAI": ["LLM Integration", "OpenAI API", "Gemini API", "Prompt Engineering"],
+    "AI Tools": ["ChatGPT", "Claude", "Cursor", "Antigravity", "Gemini API", "Prompt Engineering"],
   },
 
   experience: [
