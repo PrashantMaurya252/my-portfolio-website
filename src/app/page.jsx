@@ -21,7 +21,27 @@ export default function Portfolio() {
   const [formStatus, setFormStatus] = useState('idle');
 
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+      
+      const sections = ['about', 'skills', 'activity', 'projects', 'contact'];
+      let current = '';
+      
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 200) {
+            current = section;
+          }
+        }
+      }
+      
+      if (current) {
+        setActiveNav(current);
+      }
+    };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -150,8 +170,7 @@ export default function Portfolio() {
     { id: 'about', label: 'About', icon: 'material-symbols:person' },
     { id: 'skills', label: 'Skills', icon: 'game-icons:skills' },
     { id: 'projects', label: 'Projects', icon: 'academicons:ideas-repec' },
-    { id: 'experience', label: 'Experience', icon: 'material-symbols:work' },
-    { id: 'education', label: 'Education', icon: 'ph:certificate-fill' },
+    { id: 'activity', label: 'Activity', icon: 'mdi:chart-line' },
     { id: 'contact', label: 'Contact', icon: 'material-symbols:mail' },
   ];
 
@@ -270,7 +289,7 @@ export default function Portfolio() {
           } border-b transition-all duration-300`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-16 relative">
             <motion.div
               whileHover={{ scale: 1.05 }}
               className={`text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent`}
@@ -278,7 +297,7 @@ export default function Portfolio() {
               PM
             </motion.div>
 
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden screen-900:flex  items-center gap-4  w-max">
               {navItems.map((item) => (
                 <button
                   key={item.id}
@@ -302,19 +321,21 @@ export default function Portfolio() {
               ))}
             </div>
 
-            <button
-              onClick={() => setDarkMode(!darkMode)}
-              className={`p-2 rounded-lg transition-colors ${darkMode
-                  ? 'bg-slate-800 hover:bg-slate-700'
-                  : 'bg-gray-200 hover:bg-gray-300'
-                }`}
-            >
-              <Icon
-                icon={darkMode ? 'material-symbols:light-mode' : 'material-symbols:dark-mode'}
-                width="20"
-                height="20"
-              />
-            </button>
+            <div className="flex items-center gap-4">
+              <button
+                onClick={() => setDarkMode(!darkMode)}
+                className={`p-2 rounded-lg transition-colors ${darkMode
+                    ? 'bg-slate-800 hover:bg-slate-700'
+                    : 'bg-gray-200 hover:bg-gray-300'
+                  }`}
+              >
+                <Icon
+                  icon={darkMode ? 'material-symbols:light-mode' : 'material-symbols:dark-mode'}
+                  width="20"
+                  height="20"
+                />
+              </button>
+            </div>
           </div>
         </div>
       </motion.nav>
@@ -565,9 +586,11 @@ export default function Portfolio() {
 
 
 
-      <CurrentlyLearning darkMode={darkMode} />
-      <GitHubActivity darkMode={darkMode} />
-      <LeetCodeActivity darkMode={darkMode} />
+      <section id="activity">
+        <CurrentlyLearning darkMode={darkMode} />
+        <GitHubActivity darkMode={darkMode} />
+        <LeetCodeActivity darkMode={darkMode} />
+      </section>
       <ProjectsSection darkMode={darkMode} />
       <AchievementsCertifications darkMode={darkMode} />
       <PortfolioChatbot darkMode={darkMode} />
@@ -736,7 +759,7 @@ export default function Portfolio() {
       </footer>
 
       {/* Floating Action Buttons */}
-      <motion.div className="fixed bottom-8 right-8 z-40 flex flex-col gap-3">
+      <motion.div className="fixed bottom-24 sm:bottom-8 right-8 z-40 flex flex-col gap-3">
         {/* Email Button - Mobile Only */}
         <motion.button
           whileHover={{ scale: 1.1 }}
@@ -759,6 +782,27 @@ export default function Portfolio() {
           <Icon icon="mdi:whatsapp" width="28" height="28" />
         </motion.a>
       </motion.div>
+
+      {/* Bottom Navigation for Mobile/Tablet */}
+      <nav className={`screen-900:hidden fixed bottom-0 w-full z-50 backdrop-blur-md border-t transition-all duration-300 ${darkMode ? 'bg-slate-900/90 border-slate-700' : 'bg-white/90 border-gray-200'}`}>
+        <div className="flex justify-around items-center px-2 py-3 overflow-x-auto no-scrollbar">
+          {navItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className={`flex flex-col items-center min-w-[64px] transition-colors ${activeNav === item.id
+                  ? 'text-cyan-400'
+                  : darkMode
+                    ? 'text-gray-400 hover:text-cyan-400'
+                    : 'text-gray-600 hover:text-cyan-500'
+                }`}
+            >
+              <Icon icon={item.icon} width="24" height="24" className="mb-1" />
+              <span className="text-[10px] font-medium">{item.label}</span>
+            </button>
+          ))}
+        </div>
+      </nav>
     </div>
   );
 }

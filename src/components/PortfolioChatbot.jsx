@@ -168,7 +168,7 @@ export default function PortfolioChatbot({ darkMode }) {
   return (
     <>
       {/* Floating Trigger Button */}
-      <div className="fixed bottom-8 left-8 z-50">
+      <div className="fixed bottom-24 screen-900:bottom-8 left-8 z-50">
         <AnimatePresence mode="wait">
           {!isOpen ? (
             <motion.div
@@ -236,7 +236,7 @@ export default function PortfolioChatbot({ darkMode }) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 40, scale: 0.92 }}
             transition={{ type: 'spring', stiffness: 300, damping: 28 }}
-            className={`fixed bottom-28 left-8 z-50 w-[340px] sm:w-[380px] rounded-2xl shadow-2xl flex flex-col overflow-hidden ${
+            className={`fixed bottom-44 screen-900:bottom-28 left-4 screen-900:left-8 z-50 w-[340px] sm:w-[380px] rounded-2xl shadow-2xl flex flex-col overflow-hidden ${
               dark
                 ? 'bg-slate-900 border border-slate-700/80'
                 : 'bg-white border border-gray-200'

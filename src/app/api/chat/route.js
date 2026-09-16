@@ -22,13 +22,13 @@ SUMMARY:
 Full Stack Developer with 2+ years of experience building scalable, production-grade web applications using the MERN stack and PostgreSQL. Experienced in designing secure authentication systems (JWT, OAuth2, RBAC), developing RESTful APIs, and implementing real-time features using Socket.io. Strong expertise in backend architecture, NestJS, database optimization, and building complex workflows, audit systems, and cloud-integrated solutions (AWS, Azure, Stripe). Skilled in Generative AI including integrating LLMs using OpenAI and Gemini APIs.
 
 TECHNICAL SKILLS:
-- Languages: JavaScript (ES6+), TypeScript
-- Frontend: React.js, Next.js, Redux Toolkit, Tailwind CSS, Material UI, Framer Motion
-- Backend: Node.js, Express.js, REST API Design, Socket.io, Nest.js
-- Databases: PostgreSQL (Prisma), MongoDB (Mongoose)
-- Cloud & Tools: AWS (S3, EC2), Azure (OCR), Docker, Git, GitHub, Stripe, Firebase
-- AI / GenAI: LLM Integration, Prompt Engineering, OpenAI API, Gemini API, AI Chatbot Development
-- Security: JWT, OAuth2, RBAC, Secure Cookies, Bcrypt
+- Languages: JavaScript (ES6+), TypeScript, HTML5, CSS3
+- Frontend: React.js, Next.js, Redux Toolkit, Tailwind CSS, Material UI
+- Backend: Node.js, Express.js, NestJS, REST APIs, Socket.io
+- Databases & Caching: PostgreSQL (Prisma), MongoDB (Mongoose), MySQL, Redis, BullMQ
+- System Design: Scalable Architecture, API Design, Caching, RBAC
+- DevOps & Tools: AWS (S3), Docker, VPS Deployment, PM2, GitHub
+- AI Tools: ChatGPT, Claude, Cursor, Antigravity, Gemini API, Prompt Engineering
 
 PROFESSIONAL EXPERIENCE:
 
@@ -52,17 +52,20 @@ PROFESSIONAL EXPERIENCE:
    - Integrated 25+ APIs with optimized data fetching and caching strategies, reducing network requests by 30%
 
 PERSONAL PROJECTS:
-1. Full Stack E-Commerce Platform
-   - Next.js, Node.js, PostgreSQL, Prisma, Stripe
-   - [GitHub](https://github.com/PrashantMaurya252/e-commerce-with-postgre-and-prisma) | [Live Demo](https://e-commerce-with-postgre-and-prisma.vercel.app/user/home)
+1. Desi Market (E-Commerce Platform)
+   - Tags: Next.js, Node.js, PostgreSQL, Redis, BullMQ, Docker
+   - Description: Full-stack e-commerce platform with Redis caching for 10x faster responses, background jobs via BullMQ, JWT + Google OAuth dual authentication, secure role-based access control, Stripe Payment Intents, and containerized deployment with Docker on a VPS.
+   - [GitHub](https://github.com/PrashantMaurya252/e-commerce-with-postgre-and-prisma) | [Live Demo](https://shop.prashantmaurya.online) | [PPT](https://docs.google.com/presentation/d/1ILhkjARp6wkXzlaGblnThj2_o0FlgqCp/edit?usp=sharing&ouid=104337173772584107412&rtpof=true&sd=true)
 
-2. Instagram Clone
-   - MERN Stack, Socket.io, Cloudinary
+2. Job Scout (Management Tool)
+   - Tags: Next.js, Node.js, MongoDB, Gemini API, Playwright, Node-Cron
+   - Description: Personal job management platform to track applications and automate personalized recruiter outreach. Leverages Gemini API to analyze job descriptions and generate job-match scores, and uses Playwright and Node-Cron to automate outreach emails.
+   - [GitHub](https://github.com/PrashantMaurya252/personal-management-tool) | [Live Demo](https://jobscout.prashantmaurya.online) | [PPT](https://docs.google.com/presentation/d/19tAm1PrqFimu3hODBjX8vsSaK5h-kmp_/edit?usp=sharing&ouid=104337173772584107412&rtpof=true&sd=true)
+
+3. Instagram Clone
+   - Tags: MERN Stack, Socket.io, Redux, Cloudinary, MongoDB
+   - Description: Real-time social networking platform with live chat via Socket.io (< 100ms latency), live notifications, and 60% image optimization via Cloudinary. Features user profiles, nested comments, and bookmark collections.
    - [GitHub](https://github.com/PrashantMaurya252/instagram-clone) | [Live Demo](https://instagram-clone-awa2.onrender.com/login)
-
-3. MERN Blog Platform
-   - MERN Stack, Vite, Firebase Storage
-   - [GitHub](https://github.com/PrashantMaurya252/blog-app) | [Live Demo](https://mern-blog-m5rc.onrender.com/)
 
 ACHIEVEMENTS & CERTIFICATIONS:
 - Solved 150+ DSA problems on LeetCode
